@@ -1,2 +1,2 @@
-# abap-cloud-hash
-ABAP Cloud Facade to create secure Hashes
+# ABAP Cloud Hashes
+ABAP Cloud Facade to create secure Hashes. Improved handling for HASH and HMAC classes.
