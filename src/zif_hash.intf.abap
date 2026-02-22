@@ -27,4 +27,11 @@ INTERFACE zif_hash
   METHODS get_hash_for_xstring
     IMPORTING !value        TYPE xstring
     RETURNING VALUE(result) TYPE hash_result.
+
+  "! Convert a String to XString
+  "! @parameter value  | Value as String
+  "! @parameter result | Result as converted XString
+  METHODS string_to_xstring
+    IMPORTING !value        TYPE string
+    RETURNING VALUE(result) TYPE xstring.
 ENDINTERFACE.

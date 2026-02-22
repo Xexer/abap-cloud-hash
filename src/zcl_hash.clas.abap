@@ -54,4 +54,14 @@ CLASS zcl_hash IMPLEMENTATION.
         RAISE EXCEPTION NEW zcx_hash_error( previous = message_error ).
     ENDTRY.
   ENDMETHOD.
+
+
+  METHOD zif_hash~string_to_xstring.
+    TRY.
+        result = message_digest->string_to_xstring( if_input = value ).
+
+      CATCH cx_abap_message_digest INTO DATA(message_error).
+        RAISE EXCEPTION NEW zcx_hash_error( previous = message_error ).
+    ENDTRY.
+  ENDMETHOD.
 ENDCLASS.
